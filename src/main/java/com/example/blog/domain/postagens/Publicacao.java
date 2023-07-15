@@ -2,6 +2,7 @@ package com.example.blog.domain.postagens;
 
 import com.example.blog.DTO.publicacoes.DadosAtualizarPublicacao;
 import com.example.blog.DTO.publicacoes.DadosCadastroPublicacao;
+import com.example.blog.DTO.publicacoes.PublicacaoDTO;
 import com.example.blog.domain.assinante.Assinante;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -33,6 +34,7 @@ public class Publicacao {
         this.dataCadastro = LocalDate.now();
         this.titulo = dadosCadastroPublicacao.titulo();
     }
+
 
     public void atualizarInformacoes(DadosAtualizarPublicacao dadosAtualizarPublicacao) {
         if(dadosAtualizarPublicacao.texto() != null){

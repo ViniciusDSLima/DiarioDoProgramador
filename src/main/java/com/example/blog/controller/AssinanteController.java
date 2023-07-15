@@ -40,7 +40,7 @@ public class AssinanteController {
 
     @GetMapping
     public ResponseEntity buscarAssinantes(@RequestParam("pagina") int pagina, @RequestParam("itens") int itens){
-        var assinantes = repository.findAll(PageRequest.of(pagina,itens)).getContent();
+        var assinantes = repository.buscarTodos(PageRequest.of(pagina,itens)).getContent();
 
         return ResponseEntity.ok(assinantes);
     }
